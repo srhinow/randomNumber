@@ -1,0 +1,11 @@
+Author: Sven Rhinow
+Web: www.sr-tag.de
+License: LPGL (mit Ausnahmen)
+Version: 0.4
+Ausnahmen: Ich verbiete die Benutzung dieser Software für die Firma rokamedia und deren Personen
+
+-----------------------------
+deutsch
+-----------------------------
+dieses Contao-Frontend-Modul stellt auf der Seite wo das Modul eingebunden wurde ein Formualr mit einer Zeichenauswahl und einer Zeichenlimitierung dar.
+Die Anzeige der generierten Zeichenkette wird per Ajax neugeladen.
