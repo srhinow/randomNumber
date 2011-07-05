@@ -96,6 +96,8 @@ class ModuleRandomNumber extends Module
 	    $inputAnz->name = 'anz';
 	    $inputAnz->label = 'Passwortlänge';	    
 	    $inputAnz->value = '7';
+	    $inputAnz->maxlength = '5';
+	    $inputAnz->style = 'width:60px; margin:10px 0;';
 		 
 	    $zufallszahl = 0;
 	    

@@ -3,7 +3,7 @@
 	<input type="hidden" name="FORM_SUBMIT" value="random_number" />    
 	<div><strong><?php echo $this->inputCharTypes->generateLabel();?>:</strong><?php echo $this->inputCharTypes->generate();?></div>
 	<div><strong><?php echo $this->inputAnz->generateLabel();?>: </strong><?php echo $this->inputAnz->generate();?></div>
-	<div style="text-align:right;"><input type="submit" name="senden" value="generieren"></div>
+	<div style="text-align:center;"><input type="submit" name="senden" value="generieren"></div>
     </form>
         
     <div id="number_box" style="<?php if($this->randomNumber === 0): ?>display:none;<?php endif; ?>">
