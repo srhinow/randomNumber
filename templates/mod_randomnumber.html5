@@ -1,5 +1,5 @@
-<div style="border: 1px solid rgb(153, 153, 153); padding: 10px;">
-    <form action="{{link_url::<?php echo $this->action; ?>}}#random_number" id="form_random_number" method="post">
+<section style="border: 1px solid rgb(153, 153, 153); padding: 10px;">
+    <form action="{{link_url::<?php echo $this->action; ?>}}" id="form_random_number" method="post">
 	<input type="hidden" name="FORM_SUBMIT" value="random_number" />
 	<input type="hidden" name="REQUEST_TOKEN" value="{{request_token}}">    
 	<div><strong><?php echo $this->inputCharTypes->generateLabel();?>:</strong><?php echo $this->inputCharTypes->generate();?></div>
@@ -12,5 +12,5 @@
 	<div style="font-size:18; font-weight:bold; color:#308F00; overflow:auto; width:600px;" id="generate_number"><?php  echo $this->randomNumber;?></div>
     </div>
     
-</div>
+</section>
 

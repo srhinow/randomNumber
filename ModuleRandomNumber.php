@@ -99,13 +99,13 @@ class ModuleRandomNumber extends Module
 	    $inputAnz->maxlength = '5';
 	    $inputAnz->style = 'width:60px; margin:10px 0;';
 		 
-	    $zufallszahl = 0;
+	    $zufallszahl = '';
 	    
 	    if($this->Input->post('FORM_SUBMIT')=='random_number')
 	    {
 		$anz = $this->Input->post('anz');  
 		$inputAnz->validate();			
-	      
+
 		//anz auf Fehler pruefen
 		if(strlen($inputAnz->getErrorAsString())) $this->error = true;	      
 		
@@ -162,6 +162,7 @@ class ModuleRandomNumber extends Module
 		}
 
             }
+          
             $pageId = ($this->m2u_jumpTo)? $this->m2u_jumpTo : $objPage->id;           		
             $this->Template->action = $pageId;
             $this->Template->inputAnz = $inputAnz;			   
@@ -170,11 +171,12 @@ class ModuleRandomNumber extends Module
 	    
 	    $GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/randomNumber/html/ajax.js';
 
-	    if ($this->Input->get('isAjax') == '1')
+	    if ($this->Input->get('isAjax')==1)
 	    {   
-	      print $zufallszahl;
-	      exit; // IMPORTANT!
-	    }
+	      $return = array('zahl'=>$zufallszahl, 'token'=>REQUEST_TOKEN);
+	      print json_encode($return);
+	      exit(); // IMPORTANT!
+	    }  
 	   	  	   
 	}
 	

@@ -10,8 +10,11 @@ var doAjax = function(e){
     },
     onSuccess: function(r){
       // the 'r' is response from server
+      var resObj = JSON.decode(r);
+      
       $('number_box').setStyle('display','block');
-      $('generate_number').set('html', r).fade('in');
+      $('generate_number').set('html', resObj.zahl).fade('in');
+      $('form_random_number').getElements('input[name=REQUEST_TOKEN]').set('value',resObj.token);
     }
   }).send();
 }

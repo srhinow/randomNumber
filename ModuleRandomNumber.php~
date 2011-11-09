@@ -96,6 +96,8 @@ class ModuleRandomNumber extends Module
 	    $inputAnz->name = 'anz';
 	    $inputAnz->label = 'Passwortlänge';	    
 	    $inputAnz->value = '7';
+	    $inputAnz->maxlength = '5';
+	    $inputAnz->style = 'width:60px; margin:10px 0;';
 		 
 	    $zufallszahl = 0;
 	    
@@ -103,7 +105,7 @@ class ModuleRandomNumber extends Module
 	    {
 		$anz = $this->Input->post('anz');  
 		$inputAnz->validate();			
-	      
+
 		//anz auf Fehler pruefen
 		if(strlen($inputAnz->getErrorAsString())) $this->error = true;	      
 		
@@ -160,6 +162,7 @@ class ModuleRandomNumber extends Module
 		}
 
             }
+          
             $pageId = ($this->m2u_jumpTo)? $this->m2u_jumpTo : $objPage->id;           		
             $this->Template->action = $pageId;
             $this->Template->inputAnz = $inputAnz;			   
@@ -168,13 +171,12 @@ class ModuleRandomNumber extends Module
 	    
 	    $GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/randomNumber/html/ajax.js';
 
-	    if ($this->Input->get('isAjax') == '1')
-	    {
-	    
-	    
-	      print $zufallszahl;
-	      exit; // IMPORTANT!
-	    }
+	    if ($this->Input->get('isAjax')==1)
+	    {   
+	      $return = array('zahl'=>$zufallszahl, 'token'=>REQUEST_TOKEN);
+	      print json_encode($return);
+	      exit(); // IMPORTANT!
+	    }  
 	   	  	   
 	}
 	
