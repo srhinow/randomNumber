@@ -7,5 +7,5 @@ Ausnahmen: Ich verbiete die Benutzung dieser Software für die Firma rokamedia u
 -----------------------------
 deutsch
 -----------------------------
-dieses Contao-Frontend-Modul stellt auf der Seite wo das Modul eingebunden wurde ein Formualr mit einer Zeichenauswahl und einer Zeichenlimitierung dar.
+dieses Contao-Frontend-Modul stellt auf der Seite wo das Modul eingebunden wurde ein Formular mit einer Zeichenauswahl und einer Zeichenlimitierung dar.
 Die Anzeige der generierten Zeichenkette wird per Ajax neugeladen.
