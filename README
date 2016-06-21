@@ -14,5 +14,5 @@ Die Anzeige der generierten Zeichenkette wird per Ajax neugeladen.
 #-----------------------------
 - Contao 3 kompatibel (entwickelt mit Contao 3.5.12)
 - Es ist sowohl mit Mootools als auch mit dem jQuery-Framework kompatibel
-- Templates mit Botstrap-Austzeichnungen
+- Templates mit Bootstrap-Auszeichnungen
 
